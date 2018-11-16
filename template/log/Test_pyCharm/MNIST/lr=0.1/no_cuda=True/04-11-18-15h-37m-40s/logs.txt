@@ -1,0 +1,8 @@
+[2018-11-04 15:37:40] [    INFO] --- Setup logging. Log file: log/Test_pyCharm/MNIST/lr=0.1/no_cuda=True/04-11-18-15h-37m-40s/logs.txt (setup.py:531)
+[2018-11-04 15:37:40] [    INFO] --- Arguments saved to: log/Test_pyCharm/MNIST/lr=0.1/no_cuda=True/04-11-18-15h-37m-40s/args.txt (setup.py:534)
+[2018-11-04 15:37:40] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:539)
+[2018-11-04 15:37:43] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2018-11-04 15:37:43] [    INFO] --- Randomly chosen seed is: 3257841061 (setup.py:616)
+[2018-11-04 15:37:43] [    INFO] --- Model CNN_basic expects input size of (32, 32) (image_classification.py:63)
+[2018-11-04 15:37:43] [    INFO] --- Loading MNIST from:new_datasets/MNIST (setup.py:234)
+[2018-11-04 15:37:43] [   ERROR] --- Train folder not found in the dataset_folder=new_datasets/MNIST (image_folder_dataset.py:82)

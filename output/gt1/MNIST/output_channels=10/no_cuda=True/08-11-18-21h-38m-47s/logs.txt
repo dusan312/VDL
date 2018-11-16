@@ -1,0 +1,14 @@
+[2018-11-08 21:38:47] [    INFO] --- Setup logging. Log file: ./output/gt1/MNIST/output_channels=10/no_cuda=True/08-11-18-21h-38m-47s/logs.txt (setup.py:531)
+[2018-11-08 21:38:47] [    INFO] --- Arguments saved to: ./output/gt1/MNIST/output_channels=10/no_cuda=True/08-11-18-21h-38m-47s/args.txt (setup.py:534)
+[2018-11-08 21:38:47] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:539)
+[2018-11-08 21:38:49] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2018-11-08 21:38:49] [    INFO] --- Randomly chosen seed is: 4099388908 (setup.py:616)
+[2018-11-08 21:38:49] [   ERROR] --- Unhandled error: NameError("name 'torch' is not defined",) (RunMe.py:261)
+[2018-11-08 21:38:49] [   ERROR] --- Traceback (most recent call last):
+  File "./template/RunMe.py", line 254, in _execute
+    **args.__dict__)
+  File "/home/dusan/DeepDIVA/template/runner/my_task/my_task.py", line 119, in single_run
+    device = torch.device('cuda' if cuda and torch.cuda.is_available() else 'cpu')
+NameError: name 'torch' is not defined
+ (RunMe.py:262)
+[2018-11-08 21:38:49] [   ERROR] --- Execution finished with errors :( (RunMe.py:263)

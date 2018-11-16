@@ -1,0 +1,31 @@
+[2018-11-08 20:52:20] [    INFO] --- Setup logging. Log file: ./output/gt1/MNIST/no_cuda=True/08-11-18-20h-52m-20s/logs.txt (setup.py:531)
+[2018-11-08 20:52:20] [    INFO] --- Arguments saved to: ./output/gt1/MNIST/no_cuda=True/08-11-18-20h-52m-20s/args.txt (setup.py:534)
+[2018-11-08 20:52:20] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:539)
+[2018-11-08 20:52:23] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2018-11-08 20:52:23] [    INFO] --- Randomly chosen seed is: 2262603539 (setup.py:616)
+[2018-11-08 20:52:23] [    INFO] --- Model CNN_basic expects input size of (32, 32) (my_task.py:88)
+[2018-11-08 20:52:23] [    INFO] --- Loading MNIST from:../SETS/MNIST (setup.py:61)
+[2018-11-08 20:52:23] [    INFO] --- Setting up model CNN_basic (setup.py:86)
+[2018-11-08 20:52:23] [   ERROR] --- Unhandled error: TypeError("new() received an invalid combination of arguments - got (NoneType, int), but expected one of:\n * (torch.device device)\n * (torch.Storage storage)\n * (Tensor other)\n * (tuple of ints size, torch.device device)\n      didn't match because some of the arguments have invalid types: (\x1b[31;1mNoneType\x1b[0m, \x1b[31;1mint\x1b[0m)\n * (object data, torch.device device)\n      didn't match because some of the arguments have invalid types: (\x1b[31;1mNoneType\x1b[0m, \x1b[31;1mint\x1b[0m)\n",) (RunMe.py:261)
+[2018-11-08 20:52:23] [   ERROR] --- Traceback (most recent call last):
+  File "./template/RunMe.py", line 254, in _execute
+    **args.__dict__)
+  File "/home/dusan/DeepDIVA/template/runner/my_task/my_task.py", line 101, in single_run
+    **kwargs)
+  File "/home/dusan/DeepDIVA/template/setup.py", line 89, in set_up_model
+    model = models.__dict__[model_name](output_channels=output_channels, pretrained=pretrained)
+  File "/home/dusan/DeepDIVA/models/CNN_basic.py", line 71, in __init__
+    nn.Linear(288, output_channels)
+  File "/home/dusan/miniconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/linear.py", line 41, in __init__
+    self.weight = Parameter(torch.Tensor(out_features, in_features))
+TypeError: new() received an invalid combination of arguments - got (NoneType, int), but expected one of:
+ * (torch.device device)
+ * (torch.Storage storage)
+ * (Tensor other)
+ * (tuple of ints size, torch.device device)
+      didn't match because some of the arguments have invalid types: ([31;1mNoneType[0m, [31;1mint[0m)
+ * (object data, torch.device device)
+      didn't match because some of the arguments have invalid types: ([31;1mNoneType[0m, [31;1mint[0m)
+
+ (RunMe.py:262)
+[2018-11-08 20:52:23] [   ERROR] --- Execution finished with errors :( (RunMe.py:263)

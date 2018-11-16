@@ -1,0 +1,37 @@
+[2018-11-04 15:39:39] [    INFO] --- Setup logging. Log file: log/t12/MNIST/epochs=2/lr=0.1/no_cuda=True/04-11-18-15h-39m-39s/logs.txt (setup.py:531)
+[2018-11-04 15:39:39] [    INFO] --- Arguments saved to: log/t12/MNIST/epochs=2/lr=0.1/no_cuda=True/04-11-18-15h-39m-39s/args.txt (setup.py:534)
+[2018-11-04 15:39:39] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:539)
+[2018-11-04 15:39:42] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2018-11-04 15:39:42] [    INFO] --- Randomly chosen seed is: 2740085781 (setup.py:616)
+[2018-11-04 15:39:42] [    INFO] --- Model CNN_basic expects input size of (32, 32) (image_classification.py:63)
+[2018-11-04 15:39:42] [    INFO] --- Loading MNIST from:new_datasets/MNIST (setup.py:234)
+[2018-11-04 15:39:43] [    INFO] --- Dataset loaded as images (setup.py:259)
+[2018-11-04 15:39:43] [    INFO] --- Verifying the dataset integrity - quick (dataset_integrity.py:182)
+[2018-11-04 15:39:44] [    INFO] --- Newly measured timestamp: Sun Nov  4 15:10:08 2018 (dataset_integrity.py:188)
+[2018-11-04 15:39:44] [   ERROR] --- The dataset has been modified. The last_modified field does not match: old[Thu Nov  1 22:18:54 2018] new[Sun Nov  4 15:10:08 2018] (dataset_integrity.py:194)
+[2018-11-04 15:39:44] [    INFO] --- Setting up model CNN_basic (setup.py:86)
+[2018-11-04 15:39:44] [    INFO] --- Loading weights for data balancing (setup.py:101)
+[2018-11-04 15:39:44] [    INFO] --- Begin training (image_classification.py:76)
+[2018-11-04 15:39:44] [   ERROR] --- Unhandled error: RuntimeError('weight tensor should be defined either for all 11 classes or no classes but got weight tensor of shape: [10] at /opt/conda/conda-bld/pytorch_1518241644131/work/torch/lib/THNN/generic/ClassNLLCriterion.c:30',) (RunMe.py:261)
+[2018-11-04 15:39:44] [   ERROR] --- Traceback (most recent call last):
+  File "template/RunMe.py", line 254, in _execute
+    **args.__dict__)
+  File "/home/dusan/DeepDIVA/template/runner/image_classification/image_classification.py", line 80, in single_run
+    val_value[-1] = ImageClassification._validate(val_loader, model, criterion, writer, -1, **kwargs)
+  File "/home/dusan/DeepDIVA/template/runner/image_classification/image_classification.py", line 152, in _validate
+    return evaluate.validate(val_loader, model, criterion, writer, epoch, **kwargs)
+  File "/home/dusan/DeepDIVA/template/runner/image_classification/evaluate.py", line 20, in validate
+    return _evaluate(val_loader, model, criterion, writer, epoch, 'val', no_cuda, log_interval, **kwargs)
+  File "/home/dusan/DeepDIVA/template/runner/image_classification/evaluate.py", line 93, in _evaluate
+    loss = criterion(output, target_var)
+  File "/home/dusan/miniconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 357, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/dusan/miniconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/loss.py", line 679, in forward
+    self.ignore_index, self.reduce)
+  File "/home/dusan/miniconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/functional.py", line 1161, in cross_entropy
+    return nll_loss(log_softmax(input, 1), target, weight, size_average, ignore_index, reduce)
+  File "/home/dusan/miniconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/functional.py", line 1052, in nll_loss
+    return torch._C._nn.nll_loss(input, target, weight, size_average, ignore_index, reduce)
+RuntimeError: weight tensor should be defined either for all 11 classes or no classes but got weight tensor of shape: [10] at /opt/conda/conda-bld/pytorch_1518241644131/work/torch/lib/THNN/generic/ClassNLLCriterion.c:30
+ (RunMe.py:262)
+[2018-11-04 15:39:44] [   ERROR] --- Execution finished with errors :( (RunMe.py:263)
